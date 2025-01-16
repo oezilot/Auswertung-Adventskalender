@@ -130,5 +130,9 @@ hier sind logadaten pro aufruf der website:
 ## Graphiken machen Schritt für Schritt:
 1. Graphik welche die Aufrufe des Kalenders veranschaulicht während den dezembertagen (datensatz: gefilterte daten anz. zeilen)
 
+## Links
+- dynamische graphiken: https://quickchart.io/documentation/ 
+- 
+
 ## Autorin
 Zoé Flumini
