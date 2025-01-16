@@ -60,21 +60,75 @@ Summe aller Aufrufe ab dem 25 Dezember: 113
 ```
 
 ## Fragen für die Statistik
+daten kennenlernen:
+- erkenntnis: je nach frage ein anderes datenset und eine andere graphik
+- was heissen die verschiedenen kolonnen?
+- so sieht ein request aus wenn jemand dann den filmlink klickt: (um die logs für diese links ansehen zu können muss ich wohl das logfile für die nanoo-seite bekommen...momentan habe ich nur die logs der portalseite!)
+```bash
+https://www.nanoo.tv/link/v/799061 (die nummer am schluss variiert von film zu film!)
+```
+- wie erkennt man dass eine person die website besucht hat? was ist ein besuch?
+- was heisst es beim sdventskalenderbesuch wenn kein url eingegeben wurde?
+- wie kann man personen eindeutig identifiziern? kann amn das überhaupt?
+- wenn eine person eine aktion durchführt auf der seite wie einen button zu klicken...gibt es dafür eine neue logzeile? kann ich in den logs sehen wenn jemand auf einen link gedrückt hat? oder sieht das nur die firma der das target dieser links gehört?
+- wie sieht eine zeile aus der logdaten wenn jemand einen filmlink des adventskalenders aufruft?
+- wie sehen die logdaten für einen kalenderaufruf aus?
+   ```bash
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55076 - - [01/Dec/2024:00:17:51 +0100] "GET /adventskalender/slideshow.html HTTP/1.1" 200 9536 "https://www.nanoo.tv/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55076 - - [01/Dec/2024:00:17:51 +0100] "GET /adventskalender/slideshow.css HTTP/1.1" 200 7134 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55077 - - [01/Dec/2024:00:17:51 +0100] "GET /adventskalender/slideshow.js HTTP/1.1" 200 12672 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55077 - - [01/Dec/2024:00:17:51 +0100] "GET /adventskalender/Logo_werft22.png HTTP/1.1" 200 27224 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55076 - - [01/Dec/2024:00:17:51 +0100] "GET /adventskalender/Tree.png HTTP/1.1" 200 3493745 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55077 - - [01/Dec/2024:00:17:52 +0100] "GET /adventskalender/previous.png HTTP/1.1" 200 12052 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55077 - - [01/Dec/2024:00:17:52 +0100] "GET /adventskalender/weihnachtskranz.png HTTP/1.1" 200 75020 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   2a02:1210:861f:600:9447:ad6e:b7:54fa 55077 - - [01/Dec/2024:00:17:52 +0100] "GET /favicon.ico HTTP/1.1" 404 1460 "https://portal.nanoo.tv/adventskalender/slideshow.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15"
+   ```
+
+Welche Daten (Kolonnen) sind wichtig?
+- url (nur die zeilen mit dem eingeben des adventkanleder links)
+- requests (nur die requests auf die aventskalenderseite)
+- datum
+
 einfache fragen:
 - Total anz. Aufrufe 
 - Aufrufe für jeden Tag
 - Durchschnittliche Anzahl Aufrufe
 
 schwierige fragen:
-- Wie viele der Aufrufe haben dann auch die filme geschaut
+- Wie viele der Aufrufe haben dann auch die filme geschaut (wie viele haben auf den filmlink gedrück und dann mind so ca 30min auf diesem link verbracht? wie viele user mit dem selben usernamen habe den film geschaut und den kalender angesehen?)
 
 zusatzfragen:
 - Wie viele unique Besucher
+- welcher film wurde am meisten aufgerufen?
+- wie viele besucher sind auch auf die contributers seite gegangen
+- wie viele haben den link zum film gedrückt 
+- wie viele haben irgendeinen link gedrückt
 - Regelmässige besucher...gibt es jemand der jeden Tag ein törchen geöffnet hat, wer hat am meisten töcrhen besucht?
 - wie viele nanoo-user/wie viele nicht-user haben die seite bescuht
 
 ## Ressourcen
 link zur visualisierung der daten: https://code.visualstudio.com/docs/datascience/data-science-tutorial
+
+## Einen Blick auf die Log-Daten
+was ist ein log?
+
+struktur eines logs:
+
+wie werte ich das log aus?
+hier sind logadaten pro aufruf der website:
+```bash
+```
+
+## Daten verschönern
+1. aus dem logfile ein csv machen!
+   - csv -> mit kommas werden neue kolonnen unterschieden und mit enters eine neue zeile
+
+!!! jeder abstand ist eine neue kolonnenwand ausser für den content der sich innerhalb von [] oder "" befindet !!!
+
+1. jypyter notebook
+
+## Graphiken machen Schritt für Schritt:
+1. Graphik welche die Aufrufe des Kalenders veranschaulicht während den dezembertagen (datensatz: gefilterte daten anz. zeilen)
 
 ## Autorin
 Zoé Flumini
