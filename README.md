@@ -31,7 +31,6 @@ print(f"Summe aller Aufrufe vom 1. bis 14. Dezember: {summe}")
 ```bash
 Aufrufe Total: 1431
 Anzahl Aufrufe am Tag 1: 73
-Anzahl Aufrufe am Tag 1: 73
 Anzahl Aufrufe am Tag 2: 90
 Anzahl Aufrufe am Tag 3: 88
 Anzahl Aufrufe am Tag 4: 74
@@ -55,7 +54,7 @@ Anzahl Aufrufe am Tag 21: 27
 Anzahl Aufrufe am Tag 22: 27
 Anzahl Aufrufe am Tag 23: 22
 Anzahl Aufrufe am Tag 24: 18
-Summe aller Aufrufe vom 1. bis 14. Dezember: 1318
+Summe aller Aufrufe vom 1. bis 24. Dezember: 1318
 Summe aller Aufrufe ab dem 25 Dezember: 113
 ```
 
@@ -129,6 +128,13 @@ hier sind logadaten pro aufruf der website:
 
 ## Graphiken machen Schritt für Schritt:
 1. Graphik welche die Aufrufe des Kalenders veranschaulicht während den dezembertagen (datensatz: gefilterte daten anz. zeilen)
+   1. maximum und minimum
+   2. durchschnitt während dem dezember
+   3. totalaufrufe
+2. um welche uhrzeit geschaut
+   1. max min und durchschnitt
+   2. max stunden auf der website verbracht
+3. wie viele unique nutzer?
 
 ## Links
 - dynamische graphiken: https://quickchart.io/documentation/ 
