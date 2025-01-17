@@ -117,6 +117,8 @@ wie werte ich das log aus?
 hier sind logadaten pro aufruf der website:
 ```bash
 ```
+## Schwierigkeitem
+- man muss immer schauen dass es immer daten für alles gibt!
 
 ## Daten verschönern
 1. aus dem logfile ein csv machen!
