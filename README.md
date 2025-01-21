@@ -144,3 +144,14 @@ hier sind logadaten pro aufruf der website:
 
 ## Autorin
 Zoé Flumini
+
+
+
+
+
+
+## Step By Step
+1. So sieht das rohe logfile aus (advent_log.log) mit 1'786'007 Logzeilen
+   ```log
+   ```
+2. muster wo man erkennt wie vieoe aufrufe es gab (pro muster = 1 Aufruf)
